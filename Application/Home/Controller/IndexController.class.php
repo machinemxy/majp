@@ -5,7 +5,7 @@ class IndexController extends Controller {
     public function index(){
 		$Grammar = M('Grammar');
                 $count = $Grammar->count();
-                $Page = new \Think\Page($count,20);
+                $Page = new \Think\Page($count,15);
                 $page_info = $Page->show();
                 $grammars = $Grammar->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
 		$this->assign('grammars',$grammars);
