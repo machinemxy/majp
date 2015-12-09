@@ -1,0 +1,32 @@
+<header data-am-widget="header" class="am-header am-header-default">
+	<div class="am-header-left am-header-nav">
+        <a href="/Home/Index/index">
+			<i class="am-header-icon am-icon-arrow-left"></i>
+		</a>
+	</div>
+	
+    <h1 class="am-header-title">
+        <a href="/Home/Index/index" class="">
+			小馬日本語
+		</a>
+	</h1>
+</header>
+
+<form method="post" action="__URL__/insert" class="am-form">
+	<div class="am-panel am-panel-secondary">
+        <div class="am-panel-hd">文法新規</div>
+        <div class="am-panel-bd">
+            <div class="am-form-group">
+                <label for="grammar">文法</label>
+                <input type="text" id="grammar" name="grammar" required="required" maxlength="20"/>
+            </div>
+
+            <div class="am-form-group">
+                <label for="explanation">解釈</label>
+                <input type="text" id="explanation" name="explanation" required="required" maxlength="50"/>
+            </div>
+		
+            <p><button type="submit" class="am-btn am-btn-primary">確認</button></p>
+        </div>
+    </div>
+</form>

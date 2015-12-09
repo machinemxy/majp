@@ -1,0 +1,38 @@
+<header data-am-widget="header" class="am-header am-header-default">
+	<div class="am-header-left am-header-nav">
+        <a href="/Home/Index/index">
+			<i class="am-header-icon am-icon-arrow-left"></i>
+		</a>
+	</div>
+	
+    <h1 class="am-header-title">
+        <a href="/Home/Index/index" class="">
+			小馬日本語
+		</a>
+	</h1>
+    
+    <div class="am-header-right am-header-nav">
+        <a href="/Home/Grammar/edit/id/{$grammar.id}">
+            <i class="am-header-icon am-icon-edit"></i>
+        </a>
+        <a href="/Home/Grammar/delete_confirm/id/{$grammar.id}">
+            <i class="am-header-icon am-icon-eraser"></i>
+        </a>
+    </div>
+</header>
+
+<div class="am-panel am-panel-secondary">
+	<div class="am-panel-hd">{$grammar.grammar}</div>
+	<div class="am-panel-bd">
+        <p>解釈：</p>
+        <p>{$grammar.explanation}</p>
+        <p>例文：</p>
+        <volist name="sentences" id="sentence">
+            <p>
+                <a class="am-btn am-btn-danger" href="/Home/Sentence/delete_confirm/grammar_id/{$grammar.id}/id/{$sentence.id}">×</a>
+                {$sentence.sentence}
+            </p>
+        </volist>
+        <p><a class="am-btn am-btn-primary" href="/Home/Sentence/add/grammar_id/{$grammar.id}">例句追加</a></p>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<header data-am-widget="header" class="am-header am-header-default">
+
+      <h1 class="am-header-title">
+          <a href="/Home/Index/index">
+            小馬日本語
+          </a>
+      </h1>
+
+      <div class="am-header-right am-header-nav">
+          <a href="/Home/Grammar/add">
+                <i class="am-header-icon am-icon-plus"></i>
+          </a>
+      </div>
+  </header>
+
+<ul class="am-list">
+	<volist name="grammars" id="grammar">
+		<li>
+            <span class="am-badge am-badge-success">例文：{$grammar.sentence_count}</span>
+			<a href="/Home/Grammar/index/id/{$grammar.id}">
+				{$grammar.grammar}
+			</a>
+		</li>
+	</volist>
+</ul>
+{$page_info}
+

@@ -1,0 +1,26 @@
+<header data-am-widget="header" class="am-header am-header-default">
+	<div class="am-header-left am-header-nav">
+        <a href="/Home/Grammar/index/id/{$grammar_id}">
+			<i class="am-header-icon am-icon-arrow-left"></i>
+		</a>
+	</div>
+	
+    <h1 class="am-header-title">
+        <a href="/Home/Grammar/index/id/{$grammar_id}">
+			小馬日本語
+		</a>
+	</h1>
+</header>
+
+<form method="post" action="__URL__/delete/grammar_id/{$grammar_id}/id/{$id}" class="am-form">
+	<div class="am-panel am-panel-secondary">
+        <div class="am-panel-hd">例文削除</div>
+            <div class="am-panel-bd">
+            <div class="am-form-group">
+                <label for="password">管理パスワード</label>
+                <input type="password" id="password" name="password" required="required" maxlength="20"/>
+            </div>
+            <p><button type="submit" class="am-btn am-btn-primary">確認</button></p>
+        </div>
+    </div>
+</form>

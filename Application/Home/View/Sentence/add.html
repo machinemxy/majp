@@ -1,0 +1,29 @@
+<header data-am-widget="header" class="am-header am-header-default">
+	<div class="am-header-left am-header-nav">
+        <a href="/Home/Grammar/index/id/{$grammar.id}">
+			<i class="am-header-icon am-icon-arrow-left"></i>
+		</a>
+	</div>
+	
+    <h1 class="am-header-title">
+        <a href="/Home/Index/index" class="">
+			小馬日本語
+		</a>
+	</h1>
+</header>
+
+<div class="am-panel am-panel-secondary">
+	<div class="am-panel-hd">{$grammar.grammar}</div>
+	<div class="am-panel-bd">
+        <p>解釈：</p>
+        <p>{$grammar.explanation}</p>
+        <form method="post" action="__URL__/insert/grammar_id/{$grammar.id}" class="am-form">
+            <div class="am-form-group">
+                <label for="sentence">例文新規：</label>
+                <input type="text" id="sentence" name="sentence" required="required" maxlength="100"/>
+            </div>
+            <input type="hidden" id="grammar_id" name="grammar_id" value="{$grammar.id}"/>
+            <p><button type="submit" class="am-btn am-btn-primary">確認</button></p>
+        </form>
+	</div>
+</div>
